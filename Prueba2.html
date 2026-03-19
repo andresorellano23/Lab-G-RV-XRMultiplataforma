@@ -2,7 +2,7 @@
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
     <a-scene
@@ -11,7 +11,6 @@
       renderer="logarithmicDepthBuffer: true;"
       vr-mode-ui="enabled: false">
 
-      <!-- Modelo CAD -->
       <a-assets>
         <a-asset-item id="modeloIndustrial" src="BandaOpcion3V2.glb"></a-asset-item>
       </a-assets>
@@ -19,7 +18,7 @@
       <a-marker preset="hiro">
         <a-entity
           gltf-model="#modeloIndustrial"
-          position="0 1 -2"
+          position="0 0 0"
           scale="0.01 0.01 0.01">
         </a-entity>
       </a-marker>
