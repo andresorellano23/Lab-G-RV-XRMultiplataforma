@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <meta charset="utf-8">
+  <title>VR Banda</title>
+
+  <!-- A-Frame -->
+  <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe.min.js"></script>
 </head>
 
 <body>
-<a-scene>
+  <a-scene>
 
-  <a-assets>
-    <a-asset-item id="modelo" src="BandaOpcion3V2.glb"></a-asset-item>
-  </a-assets>
+    <!-- Cargar modelo -->
+    <a-assets>
+      <a-asset-item id="modeloIndustrial" src="BandaOpcion3V2.glb"></a-asset-item>
+    </a-assets>
 
-  <a-entity 
-    gltf-model="#modelo"
-    position="0 1.5 -3"
-    scale="1 1 1"
-    rotation="0 45 0">
-  </a-entity>
+    <!-- Modelo GLB -->
+    <a-entity 
+      gltf-model="#modeloIndustrial"
+      position="0 1 -3"
+      scale="1 1 1"
+      rotation="0 45 0">
+    </a-entity>
 
-  <a-camera position="0 1.6 0"></a-camera>
+    <!-- Entorno -->
+    <a-plane rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+    <a-sky color="#ECECEC"></a-sky>
 
-</a-scene>
+    <!-- Cámara -->
+    <a-camera position="0 1.6 0"></a-camera>
+
+  </a-scene>
 </body>
 </html>
