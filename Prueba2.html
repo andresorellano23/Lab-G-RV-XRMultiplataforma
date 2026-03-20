@@ -1,40 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>AR Banda</title>
-
-  <!-- Model Viewer -->
-  <script type="module"
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-  </script>
-
-  <style>
-    body {
-      margin: 0;
-      background: #111;
-    }
-
-    model-viewer {
-      width: 100%;
-      height: 100vh;
-    }
-  </style>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 </head>
 
 <body>
+<a-scene>
 
-<model-viewer
-  src="BandaOpcion3V2.glb"
-  alt="Modelo Banda"
-  auto-rotate
-  camera-controls
-  ar
-  ar-modes="webxr scene-viewer quick-look"
-  shadow-intensity="1"
-  exposure="1"
->
-</model-viewer>
+  <a-assets>
+    <a-asset-item id="modelo" src="BandaOpcion3V2.glb"></a-asset-item>
+  </a-assets>
 
+  <a-entity 
+    gltf-model="#modelo"
+    position="0 1.5 -3"
+    scale="1 1 1"
+    rotation="0 45 0">
+  </a-entity>
+
+  <a-camera position="0 1.6 0"></a-camera>
+
+</a-scene>
 </body>
 </html>
