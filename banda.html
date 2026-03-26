@@ -1,63 +1,46 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
   </head>
-  <body>
-    <a-scene>
 
-      <!-- Cámara -->
-      <a-camera position="0 3 8"></a-camera>
+  <body>
+    <a-scene
+      embedded
+      renderer="alpha: true; logarithmicDepthBuffer: true;"
+      vr-mode-ui="enabled: false"
+      xr-mode-ui="enabled: true"
+      webxr="requiredFeatures: hit-test, local-floor">
+
+      <!-- Cámara AR -->
+      <a-camera position="0 1.6 0"></a-camera>
 
       <!-- Luces -->
       <a-light type="directional" position="2 4 3" intensity="1"></a-light>
-      <a-light type="ambient" intensity="0.4"></a-light>
+      <a-light type="ambient" intensity="0.5"></a-light>
 
-      <!-- Piso -->
-      <a-plane rotation="-90 0 0" width="20" height="20" color="#DDDDDD"></a-plane>
+      <!-- CONTENEDOR de la banda -->
+      <a-entity id="banda" position="0 0 -3">
 
-      <!-- Marco negro -->
-      <a-box position="0 0.5 -5" width="10" height="1" depth="2" color="black"></a-box>
+        <!-- Marco negro -->
+        <a-box position="0 0.5 0" width="10" height="1" depth="2" color="black"></a-box>
 
-      <!-- Banda gris (estructura) -->
-      <a-box position="0 0.7 -5" width="9.5" height="0.5" depth="1.4" color="#BFBFBF"></a-box>
+        <!-- Banda gris -->
+        <a-box position="0 0.7 0" width="9.5" height="0.5" depth="1.4" color="#BFBFBF"></a-box>
 
-      <!-- Superficie de la banda -->
-      <a-box position="0 0.95 -5" width="9" height="0.05" depth="1.4" color="#222222"></a-box>
+        <!-- Superficie -->
+        <a-box position="0 0.95 0" width="9" height="0.05" depth="1.4" color="#222222"></a-box>
 
-      <!-- Rodillo izquierdo -->
-      <a-cylinder 
-        position="-4.8 0.7 -5"
-        radius="0.5"
-        height="1.6"
-        rotation="90 0 0"
-        color="yellow">
-      </a-cylinder>
+        <!-- Rodillos -->
+        <a-cylinder position="-4.8 0.7 0" radius="0.5" height="1.6" rotation="90 0 0" color="yellow"></a-cylinder>
+        <a-cylinder position="4.8 0.7 0" radius="0.5" height="1.6" rotation="90 0 0" color="yellow"></a-cylinder>
 
-      <!-- Línea rodillo izquierdo -->
-      <a-box position="-4.8 0.7 -5" width="0.1" height="0.1" depth="1.6" color="black"></a-box>
+        <!-- Cajas -->
+        <a-box position="-3 2 0" width="1.5" height="1.5" depth="1.2" color="red"></a-box>
+        <a-box position="0 2 0" width="1.5" height="1.5" depth="1.2" color="red"></a-box>
+        <a-box position="3 2 0" width="1.5" height="1.5" depth="1.2" color="red"></a-box>
 
-      <!-- Rodillo derecho -->
-      <a-cylinder 
-        position="4.8 0.7 -5"
-        radius="0.5"
-        height="1.6"
-        rotation="90 0 0"
-        color="yellow">
-      </a-cylinder>
-
-      <!-- Línea rodillo derecho -->
-      <a-box position="4.8 0.7 -5" width="0.1" height="0.1" depth="1.6" color="black"></a-box>
-
-      <!-- Cajas rojas con profundidad -->
-      <a-box position="-3 2 -5" width="1.5" height="1.5" depth="1.2" color="red"></a-box>
-
-      <a-box position="0 2 -5" width="1.5" height="1.5" depth="1.2" color="red"></a-box>
-
-      <a-box position="3 2 -5" width="1.5" height="1.5" depth="1.2" color="red"></a-box>
-
-      <!-- Cielo -->
-      <a-sky color="#ECECEC"></a-sky>
+      </a-entity>
 
     </a-scene>
   </body>
