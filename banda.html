@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[8:25 a.m., 26/3/2026] Cristian Bala Lab Robotica: <!DOCTYPE html>
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
@@ -38,6 +38,45 @@
       <!-- Sensor derecho -->
       <a-sphere position="3.5 1.2 -5" radius="0.15" color="#4CC3D9"></a-sphere>
 
+      <!-- Cielo -->
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
+[8:41 a.m., 26/3/2026] Cristian Bala Lab Robotica: <!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Piso de la celda -->
+      <a-plane rotation="-90 0 0" width="20" height="20" color="#555555"></a-plane>
+      <!-- Estructura de la banda (base) -->
+      <a-box position="0 0.5 -5" width="8" height="0.2" depth="1.5" color="#888888"></a-box>
+
+      <!-- Patas de soporte izquierda (ahora cilindros estilo rodillo, perpendiculares a la cinta) -->
+      <a-cylinder position="-3.5 0.25 -4.5" radius="0.1" height="1.4" rotation="90 0 0" color="#FFC65D"></a-cylinder>
+      <a-cylinder position="-3.5 0.25 -5.5" radius="0.1" height="1.4" rotation="90 0 0" color="#FFC65D"></a-cylinder>
+      <!-- Patas de soporte derecha -->
+      <a-cylinder position="3.5 0.25 -4.5" radius="0.1" height="1.4" rotation="90 0 0" color="#FFC65D"></a-cylinder>
+      <a-cylinder position="3.5 0.25 -5.5" radius="0.1" height="1.4" rotation="90 0 0" color="#FFC65D"></a-cylinder>
+
+      <!-- Rodillo izquierdo: al extremo izquierdo de la banda -->
+      <a-cylinder position="-3.5 0.6 -5" radius="0.15" height="1.5" rotation="0 0 90" color="#FFC65D"></a-cylinder>
+      <!-- Rodillo derecho: al extremo derecho de la banda -->
+      <a-cylinder position="3.5 0.6 -5" radius="0.15" height="1.5" rotation="0 0 90" color="#FFC65D"></a-cylinder>
+
+      <!-- Superficie de la banda -->
+      <a-box position="0 0.75 -5" width="7" height="0.05" depth="1.4" color="#222222"></a-box>
+      <!-- Cajas sobre la banda (productos) -->
+      <a-box position="-2 1.03 -5" width="0.5" height="0.5" depth="0.5" color="#EF2D5E"></a-box>
+      <a-box position="0 1.03 -5" width="0.5" height="0.5" depth="0.5" color="#EF2D5E"></a-box>
+      <a-box position="2 1.03 -5" width="0.5" height="0.5" depth="0.5" color="#EF2D5E"></a-box>
+      <!-- Sensor izquierdo -->
+      <a-sphere position="-3.5 1.2 -5" radius="0.15" color="#4CC3D9"></a-sphere>
+      <!-- Sensor derecho -->
+      <a-sphere position="3.5 1.2 -5" radius="0.15" color="#4CC3D9"></a-sphere>
       <!-- Cielo -->
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>
